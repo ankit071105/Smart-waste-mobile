@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "949219028687",
+    "project_id": "garbage-collector-8c46b",
+    "storage_bucket": "garbage-collector-8c46b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:949219028687:android:83974ebb3e58933a9d91ba",
+        "android_client_info": {
+          "package_name": "com.example.smart_waste_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCWqKYwAcB-f9ZQ5AlXp3d9vQovCOCf_yI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
