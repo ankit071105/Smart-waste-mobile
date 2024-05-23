@@ -1,0 +1,38 @@
+platform :ios, '13.0'
+
+# CocoaPods analytics sends network stats synchronously affecting flutter build latency.
+ENV['COCOAPODS_DISABLE_STATS'] = 'true'
+
+project 'Runner', {
+  'Debug' => :debug,
+  'Profile' => :release,
+  'Release' => :release,
+}
+
+def parse_KV_file(file, separator='=')
+  if !File.exist?(file)
+    return [];
+  end
+  file_abs_path = File.expand_path(file)
+  input_file = File.new(file_abs_path, 'r')
+  lines = input_file.read.lines
+  lines.map! { |line| line.strip.split(separator) }
+  input_file.close
+  return lines
+end
+
+# Post-install processor for Xcode 12.5+ compatibility
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['EXCLUDED_ARCHS[sdk=iphonesimulator*]'] = 'arm64'
+    end
+  end
+end
+
+target 'Runner' do
+  use_frameworks!
+  use_modular_headers!
+
+  flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
+end
