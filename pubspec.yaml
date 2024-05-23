@@ -1,0 +1,48 @@
+name: smart_waste_mobile
+description: A new Flutter project.
+publish_to: 'none' # Prevents accidental publication to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.6 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+  firebase_core: ^2.12.0
+  cloud_firestore: ^4.7.1
+  firebase_storage: ^11.2.2
+  firebase_auth: ^4.7.0
+  fluttertoast: ^8.2.1
+  get_storage: ^2.0.3
+  google_maps_flutter: ^2.2.3
+  flutter_map: ^4.0.0
+  qr_code_scanner: ^1.0.0
+  flutter_barcode_scanner: ^2.0.0
+  qr_flutter: ^4.0.0
+  intl: ^0.18.0
+  firebase_database: ^10.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: Regular
+      fonts:
+        - asset: assets/fonts/DMSans-Regular.ttf
+    - family: Medium
+      fonts:
+        - asset: assets/fonts/DMSans-Medium.ttf
+    - family: Bold
+      fonts:
+        - asset: assets/fonts/DMSans-Bold.ttf
